@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Project</title>
+
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/signin">Sign In</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/track_courses">Track Courses</a></li>
+            <li><a href="/set_goals">Set Goals</a></li>
+            <li><a href="/generate_roadmap">Generate Roadmap</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
