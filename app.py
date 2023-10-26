@@ -55,7 +55,7 @@ def signin():
 
 @app.route("/dashboard")
 def dashboard():
-    return render_template("dashboard.html", current_user= current_user)
+    return render_template("dashboard.html")
 
 @app.route("/track-courses", methods=["GET", "POST"])
 def track_courses():
