@@ -50,7 +50,7 @@ def signin():
 
         if user:
             # Redirect to the user dashboard upon successful login
-            return redirect(url_for("dashboard"))
+            return render_template("index.html")
 
     return render_template("signin.html")
 
