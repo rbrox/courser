@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 # from flask_login import current_user
 
 app = Flask(__name__, static_url_path="/static", static_folder="static")
-
+login_manager = LoginManager(app)
 # Configure the SQLite database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
@@ -34,7 +34,7 @@ def signup():
         db.session.commit()
 
         # Redirect to the user dashboard upon successful registration
-        return render_template("test.html")
+        return render_template("dashboard.html")
         #return redirect(url_for("dashboard"))
     else:
         return render_template("signup.html")
