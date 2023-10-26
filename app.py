@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import current_user
 
 app = Flask(__name__, static_url_path="/static", static_folder="static")
 
@@ -54,7 +55,7 @@ def signin():
 
 @app.route("/dashboard")
 def dashboard():
-    return render_template("dashboard.html")
+    return render_template("dashboard.html", current_user= current_user)
 
 @app.route("/track-courses", methods=["GET", "POST"])
 def track_courses():
