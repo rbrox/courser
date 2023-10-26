@@ -20,7 +20,7 @@ with app.app_context():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("landing.html")
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -34,9 +34,10 @@ def signup():
         db.session.commit()
 
         # Redirect to the user dashboard upon successful registration
-        return redirect(url_for("dashboard"))
-
-    return render_template("signup.html")
+        return render_template("test.html")
+        #return redirect(url_for("dashboard"))
+    else:
+        return render_template("signup.html")
 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
